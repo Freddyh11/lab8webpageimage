@@ -13,10 +13,10 @@ jobs:
 
     - name: Build the Docker image
       run: |
-        echo "${{ secrets.DOCKERPASSWORD }}" | docker login -u "freddyhernandezjimenez1" --password-stdin
+        echo "${{ secrets.DOCKERPASSWORD }}" | docker login -u "freddyh11" --password-stdin
         docker build -t cool_docker .
-        docker tag cool_docker freddyhernandezjimenez1/nice_docker:latest
-        docker push freddyhernandezjimenez1/nice_docker:latest
+        docker tag cool_docker freddyh11/nice_docker:latest
+        docker push freddyh11/nice_docker:latest
 
     - name: Create kubeconfig
       run: |
